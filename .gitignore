@@ -1,0 +1,77 @@
+# Entornos virtuales
+.env
+.venv/
+venv/
+ENV/
+env/
+.env/
+
+# Entorno específico para FastAPI o secretos
+.env.local
+.env.production
+
+# Archivos y carpetas generados por Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Instaladores y empaquetado
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Reportes de testing y coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+.hypothesis/
+
+# Bases de datos locales (SQLite, pruebas)
+*.db
+*.sqlite
+*.sqlite3
+test_db.db
+
+# Logs
+*.log
+logs/
+
+# IDEs/editor (VSCode, PyCharm, etc)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Sistemas operativos
+.DS_Store
+Thumbs.db
+
+# FastAPI específico (archivos runtime, instancias)
+*.pid
+instance/
+.webassets-cache
