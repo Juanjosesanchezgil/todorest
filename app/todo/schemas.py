@@ -1,5 +1,4 @@
 from pydantic import BaseModel
-from users.schemas import User
 
 
 class Task(BaseModel):
@@ -7,4 +6,3 @@ class Task(BaseModel):
     name: str
     description: str | None = None
     complete: bool
-    user: User
