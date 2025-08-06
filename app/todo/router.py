@@ -1,17 +1,10 @@
 from fastapi import APIRouter
-from pydantic import BaseModel
-
-
-class Task(BaseModel):
-    id: int
-    name: str
-    description: str | None = None
-    complete: bool
+from .schemas import Task
 
 
 tasks = [
     Task(id=1, name="tarea 1", description="tarea 1 descripcion",
-         complete=False),
+         complete=False, user=(id=1, name="Juan", surname="Sanchez", age=41)),
     Task(id=2, name="tarea 2", description="descripcion tarea 2",
          complete=False)
 ]
