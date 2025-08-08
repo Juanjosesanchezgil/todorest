@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from .schemas import User
+from database import SessionDep
 
 
 users = [
@@ -20,3 +21,11 @@ def get_user(id: int):
     for user in users:
         if user.id == id:
             return user
+
+
+@router.post("/")
+def create_user(user: User, session: SessionDep):
+    session.add(user)
+    session.commit()
+    session.refresh(user)
+    return user
