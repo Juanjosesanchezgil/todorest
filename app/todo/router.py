@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from .schemas import Task
+from .model import Task
 
 
 tasks = [

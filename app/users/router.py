@@ -1,6 +1,5 @@
 from fastapi import APIRouter
-from .model import UserDB
-from .schemas import User
+from .model import User
 from database import SessionDep
 
 
@@ -26,7 +25,6 @@ def get_user(id: int):
 
 @router.post("/", response_model=User)
 def create_user(user: User, session: SessionDep):
-    user_db = User.from_orm
     session.add(user)
     session.commit()
     session.refresh(user)
